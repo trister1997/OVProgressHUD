@@ -50,7 +50,7 @@ class ProgresshudPlugin: MethodCallHandler {
             maskType = SVProgressHUD.SVProgressHUDMaskType.Gradient
             // dialog.showWithMaskType(SVProgressHUD.SVProgressHUDMaskType.Gradient)
         } else if (call.method == "dismiss") {
-            dialog.dismiss()
+            dialog.dismissImmediately()
         } else if (call.method == "isVisible") {
             if (dialog.isShowing) {
                 result.success(true)
